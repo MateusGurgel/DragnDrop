@@ -3,25 +3,17 @@ import "./Deck.css"
 import { Droppable } from "react-beautiful-dnd";
 import Card from "../Card/Card";
 
-const bestApps = [
-  {
-    id: "Discord",
-    name: "Discord",
-    picture: "pictures/discord.png",
-  },
-  {
-    id: "VScode",
-    name: "Visual Studio Code",
-    picture: "pictures/vscode.jpg",
-  },
-  {
-    id: "Firefox",
-    name: "Firefox",
-    picture: "pictures/Firefox.png",
-  },
-];
+type Card = {
+  id: string,
+  name: string,
+  picture: string,
+}
 
-const Deck = () => {
+interface DeckProps{
+  cards: Card[]
+}
+
+const Deck = ({cards}: DeckProps) => {
   return (
     <div id="deck">
     <Droppable droppableId="droppable">
@@ -31,12 +23,12 @@ const Deck = () => {
           {...provided.droppableProps}
           {...provided.innerRef}
         >
-          {bestApps.map((tool, index) => (
+          {cards.map((card, index) => (
             <Card
-              key={tool.id}
-              id={tool.id}
-              name={tool.name}
-              picture={tool.picture}
+              key={card.id}
+              id={card.id}
+              name={card.name}
+              picture={card.picture}
               index={index}
             ></Card>
           ))}
