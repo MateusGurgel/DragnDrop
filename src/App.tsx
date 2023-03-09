@@ -1,14 +1,17 @@
-import { useState } from 'react'
-import './App.css'
+import { DragDropContext, Droppable } from "react-beautiful-dnd";
+import "./App.css";
+import Deck from "./components/Deck/Deck";
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div id="container">
-      brabor
-    </div>
-  )
+    <DragDropContext onDragEnd={(result, provided) => {}}>
+      <div id="container">
+        <Deck />
+      </div>
+    </DragDropContext>
+  );
 }
 
-export default App
+export default App;
