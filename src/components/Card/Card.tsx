@@ -1,4 +1,4 @@
-import React from 'react'
+import "./Card.css"
 import { Draggable } from 'react-beautiful-dnd'
 
 interface CardProps {
@@ -6,7 +6,6 @@ interface CardProps {
   name: string,
   picture: string,
   index: number
-
 }
 
 const Card = ({id, name, picture, index}: CardProps) => {
@@ -14,8 +13,11 @@ const Card = ({id, name, picture, index}: CardProps) => {
     <Draggable key={id} draggableId={id} index={index}>
         {(provided) => (
           <li ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
-            <div>
-              <span>{name}</span>
+            <div className="card">
+              <img src={picture} alt={name} height="100px"/>
+              <div>
+                <span>{name}</span>
+              </div>
             </div>
         </li>
         )}
