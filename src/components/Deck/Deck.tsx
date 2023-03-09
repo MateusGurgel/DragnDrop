@@ -32,7 +32,9 @@ const Deck = ({cards}: DeckProps) => {
               index={index}
             ></Card>
           ))}
+          {provided.placeholder}
         </ul>
+        
       )}
     </Droppable>
     </div>
