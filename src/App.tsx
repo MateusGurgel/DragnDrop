@@ -28,7 +28,7 @@ function App() {
   function handleOnDragEnd(result: DropResult) {
     if (!result.destination) return;
 
-    const items = Array.from(bestApps);
+    const items = Array.from(apps);
     const [reorderedItem] = items.splice(result.source.index, 1);
     items.splice(result.destination.index, 0, reorderedItem);
 
@@ -39,6 +39,7 @@ function App() {
 
 
     <DragDropContext onDragEnd={(result) => handleOnDragEnd(result)}>
+
       <div id="container">
       <h1>{`I ❤️ ${apps[0].name}`}</h1>
         <Deck cards={apps}/>
