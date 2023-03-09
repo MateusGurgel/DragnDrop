@@ -1,7 +1,7 @@
-import "./Home.css"
+import "./Deck.css"
 
 import { Droppable } from "react-beautiful-dnd";
-import Card from "../../components/Card";
+import Card from "../Card/Card";
 
 const bestTools = [
   {
@@ -23,7 +23,7 @@ const bestTools = [
 
 const Home = () => {
   return (
-    <div id="home">
+    <div id="deck">
     <Droppable droppableId="droppable">
       {(provided) => (
         <ul
