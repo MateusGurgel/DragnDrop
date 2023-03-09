@@ -3,7 +3,7 @@ import "./Deck.css"
 import { Droppable } from "react-beautiful-dnd";
 import Card from "../Card/Card";
 
-const bestTools = [
+const bestApps = [
   {
     id: "Discord",
     name: "Discord",
@@ -31,7 +31,7 @@ const Deck = () => {
           {...provided.droppableProps}
           {...provided.innerRef}
         >
-          {bestTools.map((tool, index) => (
+          {bestApps.map((tool, index) => (
             <Card
               key={tool.id}
               id={tool.id}
