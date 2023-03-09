@@ -7,7 +7,7 @@ const bestTools = [
   {
     id: "Discord",
     name: "Discord",
-    picture: "later",
+    picture: "pictures/discord.png",
   },
   {
     id: "VScode",
