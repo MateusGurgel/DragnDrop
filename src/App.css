@@ -1,9 +1,16 @@
 #container {
   background: #36393e;
+  
   width: 90vw;
-  height: 90vh;
+  height: 100%;
+  min-height:  90vh;
+  
   border-radius: 20px;
   padding: 10px;
-  text-align: center;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
