@@ -12,12 +12,12 @@ const bestTools = [
   {
     id: "VScode",
     name: "Visual Studio Code",
-    picture: "later",
+    picture: "pictures/vscode.jpg",
   },
   {
     id: "Firefox",
     name: "Firefox",
-    picture: "later",
+    picture: "pictures/Firefox.png",
   },
 ];
 
