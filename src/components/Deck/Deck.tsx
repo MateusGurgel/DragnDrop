@@ -21,7 +21,7 @@ const bestTools = [
   },
 ];
 
-const Home = () => {
+const Deck = () => {
   return (
     <div id="deck">
     <Droppable droppableId="droppable">
@@ -47,4 +47,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Deck;
